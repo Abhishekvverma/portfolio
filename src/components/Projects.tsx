@@ -165,7 +165,7 @@ const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number })
             className="p-8 md:p-10 flex flex-col flex-grow"
             style={{ transform: "translateZ(15px)" }}
           >
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -176,16 +176,16 @@ const ProjectCard = ({ project, i }: { project: typeof projects[0]; i: number })
               ))}
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-2xl md:text-3xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors duration-300 text-center md:text-left">
               {project.title}
             </h3>
 
-            <p className="text-on-surface-variant/80 mb-8 leading-relaxed line-clamp-2">
+            <p className="text-on-surface-variant/80 mb-8 leading-relaxed line-clamp-2 text-center md:text-left">
               {project.description}
             </p>
 
-            <div className="mt-auto flex items-center justify-between pt-6 border-t border-outline/10">
-              <div className="flex gap-4">
+            <div className="mt-auto flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-outline/10">
+              <div className="flex gap-4 justify-center">
                 <MagneticEffect range={35} strength={0.3}>
                   <a
                     href={project.github}
@@ -226,14 +226,14 @@ const Projects = () => {
       <div className="absolute inset-0 grid-pattern opacity-[0.03] pointer-events-none" aria-hidden="true" />
 
       <div className="container max-w-container-max px-gutter mx-auto relative z-10">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left mb-xxl max-w-4xl">
-          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block">
+        <div className="flex flex-col items-center md:items-start mx-auto md:mx-0 mb-xxl max-w-4xl">
+          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block w-full text-center md:text-left">
             Featured Works
           </ScrollReveal>
-          <ScrollReveal type="words" className="font-display text-4xl md:text-7xl text-on-surface mb-md leading-snug">
+          <ScrollReveal type="words" className="font-display text-4xl md:text-7xl text-on-surface mb-md leading-snug justify-center md:justify-start text-center md:text-left w-full">
             Digital Masterpieces
           </ScrollReveal>
-          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl text-lg opacity-80 leading-relaxed">
+          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl text-lg opacity-80 leading-relaxed text-center md:text-left w-full">
             A curated collection of high-performance applications and immersive digital
             experiences crafted with precision and modern engineering.
           </ScrollReveal>

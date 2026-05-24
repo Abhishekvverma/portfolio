@@ -135,14 +135,14 @@ const About = () => {
       <div className="absolute inset-0 grid-pattern opacity-20" aria-hidden="true" />
 
       <div className="container max-w-container-max px-gutter mx-auto relative z-10">
-        <div className="mb-xxl max-w-3xl">
-          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.3em] mb-sm block">
+        <div className="mb-xxl max-w-3xl flex flex-col items-center lg:items-start mx-auto lg:mx-0">
+          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.3em] mb-sm block w-full text-center lg:text-left">
             About Me
           </ScrollReveal>
-          <ScrollReveal type="words" className="font-display text-4xl md:text-5xl leading-tight mb-md text-on-surface">
+          <ScrollReveal type="words" className="font-display text-4xl md:text-5xl leading-tight mb-md text-on-surface w-full justify-center lg:justify-start text-center lg:text-left">
             Building Modern Digital Experiences
           </ScrollReveal>
-          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant text-xl">
+          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant text-xl w-full text-center lg:text-left">
             Focusing on innovation, performance, and user-focused development.
           </ScrollReveal>
         </div>
@@ -152,8 +152,8 @@ const About = () => {
           <div className="lg:col-span-8 md:col-span-2">
             <InteractiveGlowCard className="rounded-3xl glass-card border border-outline/20 p-xl relative overflow-hidden group h-full" glowColor="rgba(0, 112, 243, 0.15)">
               <div className="flex flex-col justify-between h-full relative z-10 gap-lg">
-                <div className="space-y-md">
-                  <div className="flex items-center gap-xs">
+                <div className="space-y-md flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <div className="flex items-center gap-xs justify-center lg:justify-start">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="font-mono text-xs text-emerald-500 uppercase tracking-widest pl-1">Available for new projects</span>
                   </div>
@@ -194,7 +194,7 @@ const About = () => {
           <div className="lg:col-span-4 md:col-span-1" ref={statsRef}>
             <InteractiveGlowCard className="rounded-3xl glass-card border border-outline/20 p-xl relative overflow-hidden group h-full" glowColor="rgba(0, 218, 243, 0.15)">
               <div className="flex flex-col justify-between h-full relative z-10 gap-lg">
-                <div className="space-y-sm">
+                <div className="space-y-sm flex flex-col items-center lg:items-start text-center lg:text-left">
                   <h4 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Metrics & Growth</h4>
                   <p className="text-sm text-on-surface-variant opacity-85">A record of constant learning and delivery.</p>
                 </div>
@@ -223,7 +223,7 @@ const About = () => {
                 glowColor={service.glowColor}
               >
                 <div className="flex flex-col gap-lg h-full relative z-10 justify-between">
-                  <div className="space-y-md">
+                  <div className="space-y-md flex flex-col items-center lg:items-start text-center lg:text-left">
                     <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
@@ -233,7 +233,7 @@ const About = () => {
                     </p>
                   </div>
                   {/* Service Deliverables Badge list */}
-                  <div className="flex flex-wrap gap-1.5 pt-md border-t border-outline/10">
+                  <div className="flex flex-wrap gap-1.5 pt-md border-t border-outline/10 justify-center lg:justify-start">
                     {service.deliverables.map((item) => (
                       <span key={item} className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-surface-container-high/40 border border-outline/10 text-on-surface-variant tracking-wider uppercase">{item}</span>
                     ))}

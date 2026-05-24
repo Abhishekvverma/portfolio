@@ -58,14 +58,14 @@ const Journey = () => {
 
       <div className="container max-w-container-max px-gutter mx-auto relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left mb-xxl max-w-4xl">
-          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block">
+        <div className="flex flex-col items-center md:items-start mx-auto md:mx-0 mb-xxl max-w-4xl">
+          <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block w-full text-center md:text-left">
             My Journey
           </ScrollReveal>
-          <ScrollReveal type="words" className="font-display text-4xl md:text-7xl text-on-surface mb-md leading-[1.1]">
+          <ScrollReveal type="words" className="font-display text-4xl md:text-7xl text-on-surface mb-md leading-[1.1] justify-center md:justify-start text-center md:text-left w-full">
             Evolution of My Craft
           </ScrollReveal>
-          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl text-lg opacity-80 leading-relaxed">
+          <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl text-lg opacity-80 leading-relaxed text-center md:text-left w-full">
             A chronological look at the key milestones, technologies, and experiences that have
             defined my path as a developer.
           </ScrollReveal>
@@ -156,7 +156,7 @@ function MilestoneCard({
 }) {
   const isRight = align === "right";
   return (
-    <div className={`group w-full ${isRight ? "text-right" : "text-left"}`}>
+    <div className={`group w-full text-left md:text-left ${isRight ? "md:text-right" : "md:text-left"}`}>
       <span className="font-mono text-sm text-primary mb-2 block">{item.period}</span>
       <h3 className="text-xl md:text-2xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
         {item.title}
@@ -164,7 +164,7 @@ function MilestoneCard({
       <p className="text-on-surface-variant leading-relaxed mb-4 text-sm md:text-base">
         {item.description}
       </p>
-      <div className={`flex flex-wrap gap-2 ${isRight ? "justify-end" : "justify-start"}`}>
+      <div className={`flex flex-wrap gap-2 justify-start md:justify-start ${isRight ? "md:justify-end" : "md:justify-start"}`}>
         {item.tags.map((tag) => (
           <span
             key={tag}

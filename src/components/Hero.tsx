@@ -152,7 +152,7 @@ const Hero = () => {
           >
             <div className="inline-flex items-center gap-sm bg-surface-container-high/60 backdrop-blur-md px-md py-xs rounded-full border border-outline/10 mb-lg overflow-hidden">
               <span className="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse flex-shrink-0" />
-              <span className="font-mono text-[13px] uppercase tracking-[0.2em] text-on-surface-variant min-w-[240px] text-left">
+              <span className="font-mono text-[13px] uppercase tracking-[0.2em] text-on-surface-variant min-w-[240px] text-center lg:text-left">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={phraseIndex}
@@ -168,7 +168,7 @@ const Hero = () => {
               </span>
             </div>
 
-            <ScrollReveal type="words" className="font-display text-4xl md:text-7xl mb-md leading-snug tracking-tight text-on-surface">
+            <ScrollReveal type="words" className="font-display text-4xl md:text-7xl mb-md leading-snug tracking-tight text-on-surface justify-center lg:justify-start">
               Crafting Scalable Digital Products With Modern Technologies
             </ScrollReveal>
 

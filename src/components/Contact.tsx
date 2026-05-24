@@ -30,12 +30,12 @@ const Contact = () => {
       <div className="container max-w-container-max px-gutter mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-xxl lg:items-center">
           <div className="space-y-xl flex flex-col items-center lg:items-start text-center lg:text-left w-full">
-            <div className="w-full text-left">
-              <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block">Get in Touch</ScrollReveal>
-              <ScrollReveal type="words" className="font-display text-4xl md:text-6xl text-on-surface mb-md leading-tight">
+            <div className="w-full text-center lg:text-left flex flex-col items-center lg:items-start">
+              <ScrollReveal direction="left" className="font-mono text-sm text-primary uppercase tracking-[0.4em] mb-sm block w-full text-center lg:text-left">Get in Touch</ScrollReveal>
+              <ScrollReveal type="words" className="font-display text-4xl md:text-6xl text-on-surface mb-md leading-tight justify-center lg:justify-start text-center lg:text-left w-full">
                 {"Let's Build Something Exceptional"}
               </ScrollReveal>
-              <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl mx-auto lg:mx-0 text-lg leading-relaxed">
+              <ScrollReveal delay={0.2} className="font-body text-on-surface-variant max-w-2xl mx-auto lg:mx-0 text-lg leading-relaxed text-center lg:text-left w-full">
                 Have a project idea, collaboration opportunity, or just want to connect? I am always open to discussing new products and digital experiences.
               </ScrollReveal>
             </div>
@@ -84,32 +84,34 @@ const Contact = () => {
                     <label htmlFor="contact-message" className="text-[10px] font-mono text-on-surface-variant uppercase tracking-[0.2em] pl-1">Message</label>
                     <textarea id="contact-message" name="message" required rows={4} placeholder="Tell me about your project..." className="w-full bg-surface-variant/50 border border-outline/20 rounded-2xl px-5 py-4 focus:outline-none focus:border-primary transition-all resize-none text-on-surface placeholder:text-on-surface-variant/40 interactive-input" />
                   </div>
-                  <MagneticEffect range={40} strength={0.15}>
-                    <motion.button
-                      type="submit"
-                      disabled={status === "submitting" || status === "success"}
-                      whileHover={{ scale: status === "idle" ? 1.02 : 1 }}
-                      whileTap={{ scale: status === "idle" ? 0.98 : 1 }}
-                      className="w-full bg-primary-container text-on-primary-container font-bold py-5 px-6 rounded-2xl shadow-xl shadow-primary-container/20 hover:shadow-primary-container/40 transition-all flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
-                    >
-                      {status === "submitting" ? (
-                        <>
-                          <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                          <span>Sending...</span>
-                        </>
-                      ) : status === "success" ? (
-                        <>
-                          <CheckCircle className="w-5 h-5" />
-                          <span>Message Sent!</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>Send Message</span>
-                          <Send className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                        </>
-                      )}
-                    </motion.button>
-                  </MagneticEffect>
+                  <div className="flex justify-center w-full">
+                    <MagneticEffect range={40} strength={0.15}>
+                      <motion.button
+                        type="submit"
+                        disabled={status === "submitting" || status === "success"}
+                        whileHover={{ scale: status === "idle" ? 1.02 : 1 }}
+                        whileTap={{ scale: status === "idle" ? 0.98 : 1 }}
+                        className="w-full max-w-[280px] bg-primary-container text-on-primary-container font-bold py-5 px-6 rounded-2xl shadow-xl shadow-primary-container/20 hover:shadow-primary-container/40 transition-all flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                      >
+                        {status === "submitting" ? (
+                          <>
+                            <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                            <span>Sending...</span>
+                          </>
+                        ) : status === "success" ? (
+                          <>
+                            <CheckCircle className="w-5 h-5" />
+                            <span>Message Sent!</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Send Message</span>
+                            <Send className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                          </>
+                        )}
+                      </motion.button>
+                    </MagneticEffect>
+                  </div>
                   {status === "success" && <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-center gap-2 text-green-500 text-sm font-medium text-center"><CheckCircle className="w-4 h-4 flex-shrink-0" />Thank you! Your message has been sent successfully.</motion.p>}
                   {status === "error" && <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-center gap-2 text-red-500 text-sm font-medium text-center"><AlertCircle className="w-4 h-4 flex-shrink-0" />Oops! Something went wrong. Please try again later.</motion.p>}
                 </form>

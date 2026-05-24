@@ -123,13 +123,13 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-surface/95 backdrop-blur-2xl border-b border-outline/10 overflow-hidden"
           >
-            <div className="flex flex-col gap-lg p-lg px-gutter">
+            <div className="flex flex-col items-center justify-center text-center gap-lg p-lg px-gutter">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-mono text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors"
+                  className="text-lg font-mono text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors w-full"
                 >
                   {link.name}
                 </a>
@@ -139,7 +139,7 @@ const Navbar = () => {
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                   setIsOpen(false);
                 }}
-                className="w-full bg-primary-container text-on-primary-container py-md rounded-xl font-body font-bold"
+                className="w-full max-w-[280px] bg-primary-container text-on-primary-container py-md rounded-xl font-body font-bold cursor-pointer"
               >
                 Hire Me
               </button>
