@@ -126,7 +126,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center pt-[72px] hero-mesh overflow-hidden"
+      className="relative min-h-screen flex items-center py-[100px] hero-mesh overflow-hidden"
       aria-label="Hero"
     >
       <ParticlesCanvas />
@@ -250,7 +250,7 @@ const Hero = () => {
                       </p>
                       <p className="pl-4">
                         stack: [
-                        <span className="text-on-surface">&quot;React&quot;, &quot;Node&quot;, &quot;Flutter&quot;</span>
+                        <span className="text-on-surface">&quot;React&quot;, &quot;Node&quot;, &quot;React Native&quot;</span>
                         ],
                       </p>
                       <p className="pl-4">

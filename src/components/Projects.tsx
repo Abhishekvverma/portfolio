@@ -20,7 +20,7 @@ const projects = [
     demo: "#",
   },
   {
-    title: "LuxeJewels",
+    title: "Swarnika",
     category: "Mobile E-Commerce",
     tags: ["React Native", "React Query", "Razorpay"],
     description:

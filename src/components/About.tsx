@@ -55,14 +55,8 @@ const StatProgressCircle = ({
 }) => {
   const radius = 20;
   const circumference = 2 * Math.PI * radius;
-  const [offset, setOffset] = useState(circumference);
-
-  useEffect(() => {
-    if (isActive) {
-      const percentage = Math.min(value / max, 1);
-      setOffset(circumference - percentage * circumference);
-    }
-  }, [isActive, value, max, circumference]);
+  const percentage = Math.min(value / max, 1);
+  const offset = isActive ? circumference - percentage * circumference : circumference;
 
   return (
     <div className="relative w-12 h-12 flex items-center justify-center flex-shrink-0">
