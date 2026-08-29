@@ -228,7 +228,7 @@ const Hero = () => {
           >
             <div className="relative w-full h-full flex items-center justify-center scale-110">
               <InteractiveGlowCard glowColor="rgba(0, 112, 243, 0.2)" className="relative z-20 w-[420px] h-[300px] rounded-[32px] rotate-[-2deg] shadow-2xl">
-                <div className="w-full h-full bg-[#131313]/90 p-xl border border-outline/20 flex flex-col justify-between overflow-hidden group">
+                <div className="w-full h-full bg-surface/90 p-xl border border-outline/20 flex flex-col justify-between overflow-hidden group">
                   <div>
                     <div className="flex justify-between items-start mb-lg">
                       <div className="flex gap-1.5">

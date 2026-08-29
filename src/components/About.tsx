@@ -165,7 +165,7 @@ const About = () => {
                   </p>
                 </div>
                 {/* Code window mock */}
-                <div className="bg-black/40 border border-outline/10 rounded-2xl p-md font-mono text-xs text-primary/80 overflow-hidden relative select-none">
+                <div className="bg-surface-container/50 border border-outline/10 rounded-2xl p-md font-mono text-xs text-primary/80 overflow-hidden relative select-none">
                   <div className="flex gap-1.5 mb-3 border-b border-outline/5 pb-2">
                     <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
                     <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
