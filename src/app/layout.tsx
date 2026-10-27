@@ -62,9 +62,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="relative scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${jetbrainsMono.variable} font-body bg-background text-on-surface antialiased selection:bg-primary-container selection:text-white transition-colors duration-300`}
+        className={`${poppins.variable} ${jetbrainsMono.variable} relative font-body bg-background text-on-surface antialiased selection:bg-primary-container selection:text-white transition-colors duration-300`}
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
