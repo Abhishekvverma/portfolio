@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Github, Twitter, Linkedin, ArrowUp } from "lucide-react";
+import { Github, Twitter, Linkedin, ArrowUp, FileText } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,10 +33,20 @@ const Footer = () => {
           <span className="font-display text-xl font-bold text-on-surface">Abhishek</span>
         </div>
 
-        {/* Copyright */}
-        <p className="text-on-surface-variant text-sm font-mono tracking-wide text-center">
-          © {new Date().getFullYear()} Abhishek Verma. All rights reserved.
-        </p>
+        {/* Copyright & Resume */}
+        <div className="flex items-center gap-3 text-on-surface-variant text-sm font-mono tracking-wide text-center">
+          <span>© {new Date().getFullYear()} Abhishek Verma</span>
+          <span className="opacity-40">•</span>
+          <a
+            href="/Abhishek_Verma_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors inline-flex items-center gap-1 text-primary/90 hover:underline"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            Resume
+          </a>
+        </div>
 
         {/* Right group: socials + back to top */}
         <div className="flex items-center gap-md">

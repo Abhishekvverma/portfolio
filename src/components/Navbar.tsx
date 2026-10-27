@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import MagneticEffect from "@/components/MagneticEffect";
@@ -91,6 +91,18 @@ const Navbar = () => {
             </MagneticEffect>
           )}
 
+          <MagneticEffect range={35} strength={0.25}>
+            <a
+              href="/Abhishek_Verma_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-md py-sm rounded-xl font-body font-semibold text-sm border border-outline/20 text-on-surface hover:text-primary hover:border-primary/40 glass-btn transition-all"
+            >
+              <FileText className="w-4 h-4 text-primary" />
+              CV
+            </a>
+          </MagneticEffect>
+
           <MagneticEffect range={40} strength={0.25}>
             <button
               onClick={() =>
@@ -134,6 +146,16 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="/Abhishek_Verma_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="w-full max-w-[280px] flex items-center justify-center gap-2 border border-outline/20 text-on-surface hover:text-primary py-md rounded-xl font-body font-bold glass-btn"
+              >
+                <FileText className="w-4 h-4 text-primary" />
+                View CV
+              </a>
               <button
                 onClick={() => {
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });

@@ -2,9 +2,10 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Smartphone, Layers, Code2 } from "lucide-react";
+import { Smartphone, Layers, Code2, FileText, Download } from "lucide-react";
 import InteractiveGlowCard from "@/components/InteractiveGlowCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import MagneticEffect from "@/components/MagneticEffect";
 
 function useCountUp(target: number, isActive: boolean, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -163,6 +164,20 @@ const About = () => {
                     and architecting scalable backends. I thrive on solving complex development hurdles and building products 
                     that users love.
                   </p>
+                  <div className="pt-2 flex flex-wrap gap-md justify-center lg:justify-start">
+                    <MagneticEffect range={35} strength={0.3}>
+                      <a
+                        href="/Abhishek_Verma_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 border border-primary/30 text-primary px-lg py-sm rounded-xl font-body font-bold text-sm transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
+                      >
+                        <FileText className="w-4 h-4" />
+                        Download Full CV
+                        <Download className="w-4 h-4 opacity-75" />
+                      </a>
+                    </MagneticEffect>
+                  </div>
                 </div>
                 {/* Code window mock */}
                 <div className="bg-surface-container/50 border border-outline/10 rounded-2xl p-md font-mono text-xs text-primary/80 overflow-hidden relative select-none">

@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Zap, Layers, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Zap, Layers, Github, Linkedin, Twitter, FileText } from "lucide-react";
 import MagneticEffect from "@/components/MagneticEffect";
 import ScrollReveal from "@/components/ScrollReveal";
 import InteractiveGlowCard from "@/components/InteractiveGlowCard";
@@ -186,6 +186,17 @@ const Hero = () => {
                   View Projects
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </button>
+              </MagneticEffect>
+              <MagneticEffect range={40} strength={0.25}>
+                <a
+                  href="/Abhishek_Verma_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-btn text-on-surface hover:text-primary px-xl py-md rounded-xl font-body font-bold active:scale-95 flex items-center justify-center gap-sm cursor-pointer transition-all border border-outline/20"
+                >
+                  <FileText className="w-5 h-5 text-primary" />
+                  View CV
+                </a>
               </MagneticEffect>
               <MagneticEffect range={40} strength={0.25}>
                 <button

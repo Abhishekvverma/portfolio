@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MessageSquare, Send, CheckCircle, AlertCircle, FileText } from "lucide-react";
 import InteractiveGlowCard from "@/components/InteractiveGlowCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import MagneticEffect from "@/components/MagneticEffect";
@@ -41,11 +41,18 @@ const Contact = () => {
             </div>
             <div className="flex flex-col gap-4 w-full items-center lg:items-start">
               {[
-                { icon: <Mail className="w-5 h-5" />, label: "Email Me", value: "abhishekverma.dev@gmail.com", href: "mailto:abhishekverma.dev@gmail.com" },
-                { icon: <MessageSquare className="w-5 h-5" />, label: "Quick Chat", value: "Book a 15-min discovery call", href: "#contact" },
+                { icon: <Mail className="w-5 h-5" />, label: "Email Me", value: "abhi2642002@gmail.com", href: "mailto:abhi2642002@gmail.com", target: undefined },
+                { icon: <FileText className="w-5 h-5" />, label: "Resume / CV", value: "Download Abhishek's CV (PDF)", href: "/Abhishek_Verma_Resume.pdf", target: "_blank" },
+                { icon: <MessageSquare className="w-5 h-5" />, label: "Quick Chat", value: "Book a 15-min discovery call", href: "#contact", target: undefined },
               ].map((item) => (
                 <InteractiveGlowCard key={item.label} className="rounded-2xl w-full max-w-[440px]" glowColor="rgba(0, 112, 243, 0.12)">
-                  <motion.a href={item.href} whileHover={{ x: 8 }} className="flex items-center gap-4 group cursor-pointer p-4 bg-surface-variant/30 border border-outline/10 hover:border-primary/30 transition-all text-left w-full">
+                  <motion.a 
+                    href={item.href} 
+                    target={item.target}
+                    rel={item.target ? "noopener noreferrer" : undefined}
+                    whileHover={{ x: 8 }} 
+                    className="flex items-center gap-4 group cursor-pointer p-4 bg-surface-variant/30 border border-outline/10 hover:border-primary/30 transition-all text-left w-full"
+                  >
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all text-primary">{item.icon}</div>
                     <div className="min-w-0 flex-1">
                       <div className="text-[10px] font-mono text-on-surface-variant uppercase tracking-widest mb-0.5">{item.label}</div>
